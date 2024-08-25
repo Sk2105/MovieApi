@@ -66,7 +66,7 @@ PUT http://localhost:5000/api/update_movie/:id
 
 ```json
 {
-    "id": id,
+    "id": 3,
     "title": "The Godfather: Part III",
     "year": 1974,
     "director": "Francis Ford Coppola",
