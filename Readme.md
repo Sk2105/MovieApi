@@ -1,16 +1,10 @@
-# Movie Backend App
-
-This movie backend rest full api is create by using `nodejs`
-
-## Follow These Steps to use it
-
-## Get Movie Request
-
-```markdown
+# Movie Backend Application
+To retrieve the list of movies, you can make a GET request to the following endpoint: 
 GET http://localhost:5000/api/movie
-```
 
-## Result
+## Expected Result
+
+Upon making the GET request, you should receive a JSON array containing the details of the movies stored in the database. The response will look like this:
 
 ```json
 [
@@ -38,13 +32,14 @@ GET http://localhost:5000/api/movie
 ]
 ```
 
-## Post movie Request
+## Post Movie Request
 
-```markdown
+To add a new movie to the database, you can make a POST request to the following endpoint:
 POST http://localhost:5000/api/add_movie
-```
 
-### Body
+### Request Body
+
+The body of the POST request should be in JSON format and include all necessary information about the movie you wish to add. The structure of the request body will look like this:
 
 ```json
 {
@@ -56,13 +51,14 @@ POST http://localhost:5000/api/add_movie
 }
 ```
 
-## Put movie Request
+## Put Movie Request
 
-```markdown
+If you need to update the details of an existing movie, you can achieve this by making a PUT request. The endpoint for this request will be:
 PUT http://localhost:5000/api/update_movie/:id
-```
 
-## Body
+### Request Body
+
+In this case, the body of the request should also be in JSON format and should contain the updated details of the movie. Here’s an example of the expected body for this request:
 
 ```json
 {
@@ -71,11 +67,12 @@ PUT http://localhost:5000/api/update_movie/:id
     "year": 1974,
     "director": "Francis Ford Coppola",
     "actors": "Al Pacino, Robert Duvall, Diane Keaton, Robert De Niro"
-  }
+}
 ```
 
 ## Delete Movie Request
 
-```markdown
+To remove a movie from the database, you would use a DELETE request targeted at the appropriate endpoint. The request would look like this:
 DELETE http://localhost:5000/api/delete_movie/:id
-```
+
+This request will remove the specified movie based on its unique identifier provided in the URL. Make sure to replace `:id` with the actual id of the movie you wish to delete from the system.
